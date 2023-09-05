@@ -1,6 +1,6 @@
 ---
 - name: Run few Linux commands
-  hosts: RXT-Nodes
+  hosts: rxt-linux-node
   gather_facts: false
   become: false
   tasks:
