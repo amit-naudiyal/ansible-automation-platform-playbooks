@@ -7,7 +7,10 @@
     - name: Get OS version
       ansible.builtin.shell:
         cmd: cat /etc/os-release
-      no_log: false    
+      register: os-release
+      no_log: false
+
+    - debug: var=os-release
     
     - name: Get OS hostname
       ansible.builtin.shell:
