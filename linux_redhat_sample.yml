@@ -1,0 +1,21 @@
+---
+- name: Run few Linux commands
+  hosts: localhost
+  gather_facts: false
+  become: false
+  tasks:
+    - name: Get OS hostname
+      ansible.builtin.shell:
+        cmd: hostname
+      no_log: false
+
+    - name: Get OS version
+      ansible.builtin.shell:
+        cmd: cat /etc/os-release
+      no_log: false
+
+    - name: List log directory
+      ansible.builtin.shell:
+        cmd: ls -l 
+        chdir: /var/log
+      no_log: false
