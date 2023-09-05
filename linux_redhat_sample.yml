@@ -1,6 +1,6 @@
 ---
 - name: Run few Linux commands
-  hosts: 172.24.128.76
+  hosts: rxt-linux-node
   gather_facts: false
   become: false
   tasks:
